@@ -4,7 +4,8 @@ Kore Compatible Docker Container
 This image can be used to build binaries that are compatible with
 the environment on the Kore cluster.
 
-For example, to build ESTools you would take the following steps:
+For example, to build ESTools you would take the following steps 
+(assuming that you have ```~/ESTools``` on your machine):
 
 ```
 $ docker run --rm -ti -v ~/:/data gario/dokore
