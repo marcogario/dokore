@@ -15,11 +15,14 @@ bash-4.2# make -j
 ```
 
 Inside the build-kore directory, you'll have a binary that is
-compatible with Kore. Note that the directory is physically on the
-host machine. In this way, you can work normally on your machine
-(e.g., update git sources, test the executable), and only perform the
-compilation through the docker image. I.e., after updating sources you
-can rebuild the binary by doing:
+compatible with Kore.
+
+Note that the option -v maps a directory (volume) from the host
+machine (in this case the home directory) to a directory of the guest
+container (in this case /data). In this way, you can work normally on
+your machine (e.g., checkout and update git sources, test the
+executable), and only perform the compilation through the docker image
+After updating sources you can rebuild the binary by doing:
 
 ```
 $ docker run --rm -ti -v ~/:/data dokore
